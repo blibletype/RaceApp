@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" th:href="@{/favicon.ico}"/>
+    <link rel="bookmark" th:href="@{/favicon.ico}"/>
+    <link rel="stylesheet" th:href ="@{/css/style.css}"/>
+    <title>Race</title>
+</head>
+<body onload="send()">
+<div class="light-container">
+    <div class="light light-expand" onclick="toggleRed()"></div>
+    <div class="light light-enter" onclick="toggleYellow()"></div>
+    <div class="light light-fill" onclick="toggleGreen()"></div>
+</div>
+<div class="stopwatch-container">
+    <div class="stopwatch">00:00:00</div>
+    <div class="stopwatch-buttons">
+        <button onclick="stopwatchStart()">START</button>
+        <button onclick="stopwatchPause()">PAUSE</button>
+        <button onclick="stopwatchStop()">STOP</button>
+    </div>
+</div>
+    <section class="wrapper"></section>
+<script type="text/javascript" th:src="@{js/jquery-3.6.0.js}"></script>
+<script th:src="@{/js/app.js}"></script>
+</body>
+</html>
